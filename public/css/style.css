@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+/* Header */
+#header {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 30px; /* tăng padding để header cao hơn */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Logo */
+.logo img {
+    height: 65px; /* logo to hơn */
+}
+.logo .logo-text {
+    margin-top: 5px; /* khoảng cách với logo */
+    font-size: 18px; /* cỡ chữ */
+    font-weight: bold; /* chữ đậm */
+    font-family: "Lobster", sans-serif;
+}
+
+/* Menu */
+#menu {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* cách xa hơn */
+}
+
+#menu ul {
+    list-style: none;
+    display: flex;
+    gap: 35px; /* khoảng cách item to hơn */
+}
+/* Ẩn menu con mặc định */
+#menu ul ul {
+    display: none;
+    position: absolute;
+    background: #fff;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Style item trong menu con */
+#menu ul ul li {
+    width: 180px;
+    padding: 0;
+}
+
+#menu ul ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#menu ul ul li a:hover {
+    background: #eecc51;
+    color: #fff;
+}
+
+/* Hiện menu con khi hover */
+#menu ul li {
+    position: relative;
+}
+
+#menu ul li:hover > ul {
+    display: block;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px; /* chữ to hơn */
+    font-weight: 500;
+    transition: color 0.3s;
+    color: #333;
+}
+/* Khi hover vào menu item */
+#menu ul li a:hover {
+    color: #eecc51; /* màu cam giống Đăng Nhập */
+}
+/* Nút Mua Vé */
+.btn-ticket {
+    background: #eecc51;
+    color: #333;
+    padding: 10px 22px; /* nút to hơn */
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    margin-right: 25px;
+}
+
+.btn-ticket:hover {
+    background: #ffe998;
+}
+
+/* Right section */
+.right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.search {
+    font-size: 20px; /* icon to hơn */
+    cursor: pointer;
+}
+
+.login {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px; /* chữ to hơn */
+}
+
+.login:hover {
+    color: #eecc51;
+}
+
+/* END HEADER */
+
+/* START SLIDER AND QUICK BOOKING  */
+/* Slider */
+/* Slider */
+/* Slider */
+
+.slider {
+    margin-top: 15px; /* tạo khoảng cách dưới header */
+    width: 100%;
+    max-width: 1600px; /* tăng chiều ngang slider */
+    height: 500px; /* tăng chiều cao slider */
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 500px; /* tăng chiều cao slide */
+    background-position: center;
+    background-size: cover; /* luôn phủ kín khung, không bị viền đen */
+    background-repeat: no-repeat;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+/* Ảnh cho từng slide */
+.slide1 {
+    background-image: url("/assets/img/khe-uoc-co-dau/khe-uoc-co-dau-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px; /* tăng chiều cao slide1 */
+}
+.slide2 {
+    background-image: url("/assets/img/lam-giau-voi-ma/lam-giau-voi-ma-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px; /* tăng chiều cao slide2 */
+}
+.slide3 {
+    background-image: url("/assets/img/mua-do/mua-do-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px; /* tăng chiều cao slide3 */
+}
+.slide4 {
+    background-image: url("/assets/img/tu-chien-tren-khong/tu-chien-tren-khong-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px; /* tăng chiều cao slide3 */
+}
+
+/* Nút điều hướng */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+.prev:hover,
+.next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+.prev {
+    left: 15px;
+}
+.next {
+    right: 15px;
+}
+
+/* Quick booking */
+.quick-booking {
+    position: relative;
+    top: -10px; /* kéo lên lấn slider một chút */
+    margin: 0 auto;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 18px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 1000px;
+    z-index: 5;
+}
+
+.step {
+    font-size: 15px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.step .num {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: #eecc51;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 22px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.btn-book {
+    background: #eecc51;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background 0.3s;
+}
+
+.btn-book:hover {
+    background: #d94b1c;
+}
+
+/* Dropdown cho quick-booking */
+.quick-booking .dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    min-width: 220px;
+    z-index: 20;
+}
+.quick-booking .dropdown-item {
+    padding: 10px 18px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #333;
+    transition: background 0.2s;
+}
+.quick-booking .dropdown-item:hover {
+    background: #eecc51;
+    color: #fff;
+}
+.quick-booking .step {
+    position: relative;
+    cursor: pointer;
+}
+.quick-booking .step.active .dropdown {
+    display: block;
+}
