@@ -9,7 +9,7 @@ class Room extends Model
 {
     protected $table = 'rooms';
     protected $fillable = [
-        'name',
+        'name', 'theater_id'
     ];
     protected $guarded = ['room_id'];
     protected $primaryKey = 'room_id';

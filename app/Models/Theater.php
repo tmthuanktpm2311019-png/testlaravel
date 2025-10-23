@@ -9,7 +9,7 @@ class Theater extends Model
 {
     protected $table = 'theaters';
     protected $fillable = [
-        'name', 'theater_systems_id',
+        'name', 'address', 'city', 'phone_number', 'email', 'total_screens'
     ];
     protected $guarded = ['theater_id'];
     protected $primaryKey = 'theater_id';

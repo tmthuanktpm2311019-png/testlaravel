@@ -9,7 +9,7 @@ class ShowTime extends Model
 {
     protected $table = 'showtimes';
     protected $fillable = [
-        'movie_id', 'room_id', 'start_time',
+        'movie_id', 'room_id', 'show_date', 'start_time', 'price'
     ];
     protected $guarded = ['showtime_id'];
     protected $primaryKey = 'showtime_id';

@@ -14,29 +14,40 @@ class TheaterSeeder extends Seeder
      */
     public function run()
     {
-        // Giả sử các hệ thống rạp đã có id từ 1 đến 5 tương ứng với các hệ thống đã seed trước đó
-        $theaters = [
-            // CGV
-            ['name' => 'CGV Vincom Đồng Khởi', 'theater_systems_id' => 1],
-            ['name' => 'CGV Crescent Mall', 'theater_systems_id' => 1],
-            // Lotte Cinema
-            ['name' => 'Lotte Cinema Nam Sài Gòn', 'theater_systems_id' => 2],
-            ['name' => 'Lotte Cinema Gò Vấp', 'theater_systems_id' => 2],
-            // Galaxy Cinema
-            ['name' => 'Galaxy Nguyễn Du', 'theater_systems_id' => 3],
-            ['name' => 'Galaxy Kinh Dương Vương', 'theater_systems_id' => 3],
-            // BHD Star
-            ['name' => 'BHD Star Bitexco', 'theater_systems_id' => 4],
-            ['name' => 'BHD Star Vincom Thảo Điền', 'theater_systems_id' => 4],
-            // Mega GS
-            ['name' => 'Mega GS Cao Thắng', 'theater_systems_id' => 5],
-            ['name' => 'Mega GS Bình Dương', 'theater_systems_id' => 5],
-        ];
-        foreach ($theaters as &$theater) {
-            $theater['created_at'] = now();
-            $theater['updated_at'] = now();
-        }
-        
-        \DB::table('theaters')->insert($theaters);
+        \DB::table('theaters')->insert([
+            [
+                'theater_id' => 1,
+                'name' => 'TVC Vincom Center',
+                'address' => '72 Lê Thánh Tôn, Quận 1, TP.HCM',
+                'city' => 'TP.HCM',
+                'phone_number' => '028-3936-7999',
+                'email' => 'vincom@cgv.vn',
+                'total_screens' => 8,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'theater_id' => 2,
+                'name' => 'TVC Hà Nội',
+                'address' => '54 Liễu Giai, Ba Đình, Hà Nội',
+                'city' => 'Hà Nội',
+                'phone_number' => '024-3333-8888',
+                'email' => 'lottehn@lotte.vn',
+                'total_screens' => 6,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'theater_id' => 3,
+                'name' => 'TVC Nguyễn Du',
+                'address' => '116 Nguyễn Du, Quận 1, TP.HCM',
+                'city' => 'TP.HCM',
+                'phone_number' => '028-3929-3939',
+                'email' => 'nguyendu@galaxy.vn',
+                'total_screens' => 5,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
     }
 }

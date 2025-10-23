@@ -9,69 +9,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    
+    <link rel="stylesheet" href="{{ asset('css/movie-content.css') }}">
 
   </head>
   <body>
-    <!-----------------
-    START HEADER 
-    ------------------>
-    <header id="header">
-      <div class="header-container">
-        <!-- Logo -->
-        <div class="logo">
-          <a href="{{ url('/') }}">
-            <img class="header-logo" src="{{ asset('assets/img/TVCinema-logo.webp') }}" alt="TVCinema-logo">
-
-          </a>
-          <span class="logo-text">TVCinema</span>
-        </div>
-
-        <!-------------
-          START Menu
-        -------------->
-        <nav id="menu">
-          <a href="#" class="btn-ticket">🎟 Mua Vé</a>
-          <ul>
-            <li><a href="{{ url('/') }}">Trang chủ</a></li>
-            <li>
-              <a href="#">Phim</a>
-              <ul>
-                <li><a href="">Phim đang chiếu</a></li>
-                <li><a href="">Phim sắp chiếu</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">Rạp chiếu</a>
-              <ul>
-                <li><a href="">CGV</a></li>
-                <li><a href="">Galaxy Cinema</a></li>
-                <li><a href="">Lotte Cinema</a></li>
-                <li><a href="">BHD Star</a></li>
-              </ul>
-            </li>
-            <li><a href="{{ url('/lien-he') }}">Liên hệ</a></li>
-          </ul>
-        </nav>
-        <!-------------
-          END Menu
-        -------------->
-
-        <!-------------
-          START RIGHT 
-        -------------->
-        <div class="right">
-          <button class="search"><i class="bx bx-search"></i></button>
-          <a href="#" class="login">Đăng Nhập</a>
-        </div>
-        <!-------------
-          END RIGHT 
-        -------------->
-      </div>
-    </header>
-    <!-----------------
-       END HEADER 
-    ------------------>
+    @include('frontend.header')
 
     <!-- Slider Section -->
 
@@ -102,10 +44,10 @@
         </div>
         <div class="step step-cinema"><span class="num">2</span> <span class="step-label">Chọn Rạp</span>
           <div class="dropdown dropdown-cinema">
-            <div class="dropdown-item">CGV</div>
-            <div class="dropdown-item">GALAXY CINEMA</div>
-            <div class="dropdown-item">LOTTE CINEMA</div>
-            <div class="dropdown-item">BHD STAR</div>
+            <div class="dropdown-item">TVC Đồng Khởi</div>
+            <div class="dropdown-item">TVC Nguyễn Huệ</div>
+            <div class="dropdown-item">TVC Phú Mỹ Hưng</div>
+            <div class="dropdown-item">TVC Gò Vấp</div>
           </div>
         </div>
         <div class="step step-date"><span class="num">3</span> <span class="step-label">Chọn Ngày</span>
@@ -125,6 +67,10 @@
         <button class="btn-book">Mua vé nhanh</button>
       </div>
     </div>
+
+    <!-- MOVIE CONTENT -->
+    @include('frontend.movie-content')
+    @include ('frontend.uu-dai')
 
     {{----------------- SCRIPT ------------------------}}
     <script src="{{ asset('js/main.js') }}"></script>

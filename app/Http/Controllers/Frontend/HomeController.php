@@ -14,6 +14,8 @@ class HomeController extends Controller
             ['image' => 'assets/img/lam-giau-voi-ma/lam-giau-voi-ma-bg.jpg', 'title' => 'Làm Giàu Với Ma'],
             // Thêm slide khác nếu muốn
         ];
-        return view('frontend.home', compact('slides'));
+        $nowShowingMovies = \App\Models\Movie::where('status', 'now_showing')->get();
+        $comingSoonMovies = \App\Models\Movie::where('status', 'coming_soon')->get();
+        return view('frontend.home', compact('slides', 'nowShowingMovies', 'comingSoonMovies'));
     }
 }

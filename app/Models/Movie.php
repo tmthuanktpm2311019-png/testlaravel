@@ -11,8 +11,8 @@ class Movie extends Model
     protected $fillable = [
         'title', 'description', 'duration',
         'release_date','poster_url', 'bg_url',
-        'status', 'category', 'actor','diretor',
-        'country','trailer_url'
+        'status', 'category', 'actor','director',
+        'country','trailer_url','age','slug'
     ];
     protected $guarded = ['movie_id'];
     protected $primaryKey = 'movie_id';

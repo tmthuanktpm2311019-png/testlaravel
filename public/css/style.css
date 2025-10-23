@@ -144,7 +144,96 @@ body {
 .login:hover {
     color: #eecc51;
 }
+/* Avatar & Dropdown User Styles */
+/* Dropdown avatar thẩm mỹ */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 48px;
+    min-width: 210px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(26, 34, 63, 0.14);
+    z-index: 100;
+    padding: 18px 0 10px 0;
+    animation: fadeIn 0.2s;
+    border: 1px solid #f6c23e1a;
+}
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 20px 8px 20px;
+}
 
+.dropdown-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 2px solid #eecc51;
+    object-fit: cover;
+}
+
+.dropdown-name {
+    font-weight: 600;
+    color: #1a223f;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.dropdown-divider {
+    border: none;
+    border-top: 1px solid #f6c23e2a;
+    margin: 0 18px 10px 18px;
+}
+
+.manage-btn,
+.account-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 90%;
+    margin: 0 auto 6px auto;
+    padding: 10px 16px;
+    color: #1a223f;
+    font-weight: 500;
+    text-align: left;
+    text-decoration: none;
+    border-radius: 8px;
+    background: none;
+    transition: background 0.18s, color 0.18s;
+    font-size: 15px;
+}
+.manage-btn:hover,
+.account-btn:hover {
+    background: #eecc51;
+    color: #fff;
+}
+
+.logout-btn {
+    width: 90%;
+    margin: 0 auto;
+    background: none;
+    border: none;
+    color: #e74c3c;
+    font-weight: 500;
+    padding: 10px 16px;
+    text-align: left;
+    border-radius: 8px;
+    transition: background 0.18s;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.logout-btn:hover {
+    background: #f5f5f5;
+    color: #d94b1c;
+}
 /* END HEADER */
 
 /* START SLIDER AND QUICK BOOKING  */
@@ -321,4 +410,15 @@ body {
 }
 .quick-booking .step.active .dropdown {
     display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
