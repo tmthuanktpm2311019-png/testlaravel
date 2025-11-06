@@ -21,7 +21,7 @@ body {
 .header-container {
     max-width: 1200px;
     margin: auto;
-    padding: 15px 30px; /* tăng padding để header cao hơn */
+    padding: 15px 30px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -33,13 +33,14 @@ body {
 }
 /* Logo */
 .logo img {
-    height: 65px; /* logo to hơn */
+    height: 65px;
 }
+
 .logo .logo-text {
-    margin-top: 5px; /* khoảng cách với logo */
-    font-size: 18px; /* cỡ chữ */
-    font-weight: bold; /* chữ đậm */
+    font-size: 18px;
+    font-weight: bold;
     font-family: "Lobster", sans-serif;
+    color: #000; /* hoặc màu thương hiệu nếu muốn nổi bật hơn */
 }
 
 /* Menu */
@@ -271,28 +272,28 @@ body {
 
 /* Ảnh cho từng slide */
 .slide1 {
-    background-image: url("/assets/img/khe-uoc-co-dau/khe-uoc-co-dau-bg.jpg");
+    background-image: url("/assets/img/Phim-dang-chieu/khe-uoc-co-dau/khe-uoc-co-dau-bg.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 500px; /* tăng chiều cao slide1 */
 }
 .slide2 {
-    background-image: url("/assets/img/lam-giau-voi-ma/lam-giau-voi-ma-bg.jpg");
+    background-image: url("/assets/img/Phim-dang-chieu/lam-giau-voi-ma/lam-giau-voi-ma-bg.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 500px; /* tăng chiều cao slide2 */
 }
 .slide3 {
-    background-image: url("/assets/img/mua-do/mua-do-bg.jpg");
+    background-image: url("assets/img/Phim-sap-chieu/nha-ma-xo/nha-ma-xo-bg.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 500px; /* tăng chiều cao slide3 */
 }
 .slide4 {
-    background-image: url("/assets/img/tu-chien-tren-khong/tu-chien-tren-khong-bg.jpg");
+    background-image: url("assets/img/bg/momo-galaxy-bg.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;

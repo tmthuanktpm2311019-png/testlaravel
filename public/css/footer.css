@@ -1,0 +1,123 @@
+/* ===== FOOTER WRAPPER ===== */
+footer.footer {
+    background: linear-gradient(180deg, #0b0b0b 0%, #141414 100%);
+    color: #ddd;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    margin-top: 60px; /* tạo khoảng cách rõ ràng với nội dung */
+    padding-top: 60px;
+}
+
+/* ===== RESET & BOX MODEL ===== */
+footer.footer * {
+    box-sizing: border-box;
+}
+
+/* ===== TOP SECTION ===== */
+.footer-top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-title {
+    color: #ffb703;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* ===== LINKS & INFO ===== */
+.footer-links,
+.footer-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li,
+.footer-info li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffb703;
+    padding-left: 6px;
+}
+
+.footer-info i {
+    color: #ffb703;
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.footer-social {
+    margin-top: 10px;
+}
+
+.footer-social a {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffb703;
+    margin-right: 8px;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    background: #ffb703;
+    color: #0b0b0b;
+    transform: translateY(-3px);
+}
+
+/* ===== BOTTOM SECTION ===== */
+.footer-bottom {
+    background: #0a0a0a;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #aaa;
+}
+
+.footer-bottom span {
+    color: #ffb703;
+    font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .footer-top {
+        text-align: center;
+    }
+
+    .footer-links li,
+    .footer-info li {
+        margin-bottom: 8px;
+    }
+
+    .footer-social a {
+        margin: 4px;
+    }
+
+    .footer-info i {
+        display: none;
+    }
+}
